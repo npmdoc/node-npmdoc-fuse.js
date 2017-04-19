@@ -1,9 +1,14 @@
-# api documentation for  [fuse.js (v2.6.2)](https://github.com/krisk/Fuse#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-fuse.js.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-fuse.js) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-fuse.js.svg)](https://travis-ci.org/npmdoc/node-npmdoc-fuse.js)
+# npmdoc-fuse.js
+
+#### api documentation for  [fuse.js (v2.6.2)](https://github.com/krisk/Fuse#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-fuse.js.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-fuse.js) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-fuse.js.svg)](https://travis-ci.org/npmdoc/node-npmdoc-fuse.js)
+
 #### Lightweight fuzzy-search
 
-[![NPM](https://nodei.co/npm/fuse.js.png?downloads=true)](https://www.npmjs.com/package/fuse.js)
+[![NPM](https://nodei.co/npm/fuse.js.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/fuse.js)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-fuse.js/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-fuse.js_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-fuse.js/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-fuse.js/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-fuse.js/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-fuse.js/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-fuse.js/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-fuse.js/build/screenCapture.npmPackageListing.svg)
 
@@ -40,13 +45,11 @@
     "main": "./src/fuse.js",
     "maintainers": [
         {
-            "name": "krisk",
-            "email": "kirollos@gmail.com"
+            "name": "krisk"
         }
     ],
     "name": "fuse.js",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/krisk/Fuse.git"
@@ -58,17 +61,6 @@
     "version": "2.6.2"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module fuse.js](#apidoc.module.fuse.js)
-1.  string <span class="apidocSignatureSpan">fuse.js.</span>VERSION
-
-
-
-# <a name="apidoc.module.fuse.js"></a>[module fuse.js](#apidoc.module.fuse.js)
 
 
 
