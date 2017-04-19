@@ -63,7 +63,135 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.fuse.js.js">
+            function <span class="apidocSignatureSpan">fuse.</span>js
+            <span class="apidocSignatureSpan">(list, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fuse.js.fuse">
+            function <span class="apidocSignatureSpan">fuse.js.</span>fuse
+            <span class="apidocSignatureSpan">(list, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fuse.js.js.fuse">
+            function <span class="apidocSignatureSpan">fuse.js.</span>js.fuse
+            <span class="apidocSignatureSpan">(list, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fuse.js.</span>js.fuse.prototype</span>
+
+        </li>
+
+        <li>
+
             <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">fuse.js.</span>VERSION</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fuse.js.fuse">module fuse.js.fuse</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fuse.js.fuse.fuse">
+            function <span class="apidocSignatureSpan">fuse.js.</span>fuse
+            <span class="apidocSignatureSpan">(list, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">fuse.js.fuse.</span>VERSION</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fuse.js.fuse.prototype">module fuse.js.fuse.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fuse.js.fuse.prototype._analyze">
+            function <span class="apidocSignatureSpan">fuse.js.fuse.prototype.</span>_analyze
+            <span class="apidocSignatureSpan">(key, text, entity, index)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fuse.js.fuse.prototype._computeScore">
+            function <span class="apidocSignatureSpan">fuse.js.fuse.prototype.</span>_computeScore
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fuse.js.fuse.prototype._format">
+            function <span class="apidocSignatureSpan">fuse.js.fuse.prototype.</span>_format
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fuse.js.fuse.prototype._prepareSearchers">
+            function <span class="apidocSignatureSpan">fuse.js.fuse.prototype.</span>_prepareSearchers
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fuse.js.fuse.prototype._sort">
+            function <span class="apidocSignatureSpan">fuse.js.fuse.prototype.</span>_sort
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fuse.js.fuse.prototype._startSearch">
+            function <span class="apidocSignatureSpan">fuse.js.fuse.prototype.</span>_startSearch
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fuse.js.fuse.prototype.search">
+            function <span class="apidocSignatureSpan">fuse.js.fuse.prototype.</span>search
+            <span class="apidocSignatureSpan">(pattern)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fuse.js.fuse.prototype.set">
+            function <span class="apidocSignatureSpan">fuse.js.fuse.prototype.</span>set
+            <span class="apidocSignatureSpan">(list)</span>
+            </a>
 
         </li>
 
@@ -74,6 +202,571 @@
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.fuse.js" id="apidoc.module.fuse.js">module fuse.js</a></h1>
 
+
+    <h2>
+        <a href="#apidoc.element.fuse.js.js" id="apidoc.element.fuse.js.js">
+        function <span class="apidocSignatureSpan">fuse.</span>js
+        <span class="apidocSignatureSpan">(list, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Fuse(list, options) {
+  var key
+
+  this.list = list
+  this.options = options = options || {}
+
+  for (key in defaultOptions) {
+    if (!defaultOptions.hasOwnProperty(key)) {
+      continue;
+    }
+    // Add boolean type options
+    if (typeof defaultOptions[key] === &#x27;boolean&#x27;) {
+      this.options[key] = key in options ? options[key] : defaultOptions[key];
+    // Add all other options
+    } else {
+      this.options[key] = options[key] || defaultOptions[key]
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fuse.js.fuse" id="apidoc.element.fuse.js.fuse">
+        function <span class="apidocSignatureSpan">fuse.js.</span>fuse
+        <span class="apidocSignatureSpan">(list, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Fuse(list, options) {
+  var key
+
+  this.list = list
+  this.options = options = options || {}
+
+  for (key in defaultOptions) {
+    if (!defaultOptions.hasOwnProperty(key)) {
+      continue;
+    }
+    // Add boolean type options
+    if (typeof defaultOptions[key] === &#x27;boolean&#x27;) {
+      this.options[key] = key in options ? options[key] : defaultOptions[key];
+    // Add all other options
+    } else {
+      this.options[key] = options[key] || defaultOptions[key]
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fuse.js.js.fuse" id="apidoc.element.fuse.js.js.fuse">
+        function <span class="apidocSignatureSpan">fuse.js.</span>js.fuse
+        <span class="apidocSignatureSpan">(list, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Fuse(list, options) {
+  var key
+
+  this.list = list
+  this.options = options = options || {}
+
+  for (key in defaultOptions) {
+    if (!defaultOptions.hasOwnProperty(key)) {
+      continue;
+    }
+    // Add boolean type options
+    if (typeof defaultOptions[key] === &#x27;boolean&#x27;) {
+      this.options[key] = key in options ? options[key] : defaultOptions[key];
+    // Add all other options
+    } else {
+      this.options[key] = options[key] || defaultOptions[key]
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fuse.js.fuse" id="apidoc.module.fuse.js.fuse">module fuse.js.fuse</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fuse.js.fuse.fuse" id="apidoc.element.fuse.js.fuse.fuse">
+        function <span class="apidocSignatureSpan">fuse.js.</span>fuse
+        <span class="apidocSignatureSpan">(list, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Fuse(list, options) {
+  var key
+
+  this.list = list
+  this.options = options = options || {}
+
+  for (key in defaultOptions) {
+    if (!defaultOptions.hasOwnProperty(key)) {
+      continue;
+    }
+    // Add boolean type options
+    if (typeof defaultOptions[key] === &#x27;boolean&#x27;) {
+      this.options[key] = key in options ? options[key] : defaultOptions[key];
+    // Add all other options
+    } else {
+      this.options[key] = options[key] || defaultOptions[key]
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fuse.js.fuse.prototype" id="apidoc.module.fuse.js.fuse.prototype">module fuse.js.fuse.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fuse.js.fuse.prototype._analyze" id="apidoc.element.fuse.js.fuse.prototype._analyze">
+        function <span class="apidocSignatureSpan">fuse.js.fuse.prototype.</span>_analyze
+        <span class="apidocSignatureSpan">(key, text, entity, index)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_analyze = function (key, text, entity, index) {
+  var options = this.options
+  var words
+  var scores
+  var exists = false
+  var existingResult
+  var averageScore
+  var finalScore
+  var scoresLen
+  var mainSearchResult
+  var tokenSearcher
+  var termScores
+  var word
+  var tokenSearchResult
+  var hasMatchInText
+  var checkTextMatches
+  var i
+  var j
+
+  // Check if the text can be searched
+  if (text === undefined || text === null) {
+    return
+  }
+
+  scores = []
+
+  var numTextMatches = 0
+
+  if (typeof text === &#x27;string&#x27;) {
+    words = text.split(options.tokenSeparator)
+
+    if (options.verbose) log(&#x27;---------\nKey:&#x27;, key)
+
+    if (this.options.tokenize) {
+      for (i = 0; i &#x3c; this.tokenSearchers.length; i++) {
+        tokenSearcher = this.tokenSearchers[i]
+
+        if (options.verbose) log(&#x27;Pattern:&#x27;, tokenSearcher.pattern)
+
+        termScores = []
+        hasMatchInText = false
+
+        for (j = 0; j &#x3c; words.length; j++) {
+          word = words[j]
+          tokenSearchResult = tokenSearcher.search(word)
+          var obj = {}
+          if (tokenSearchResult.isMatch) {
+            obj[word] = tokenSearchResult.score
+            exists = true
+            hasMatchInText = true
+            scores.push(tokenSearchResult.score)
+          } else {
+            obj[word] = 1
+            if (!this.options.matchAllTokens) {
+              scores.push(1)
+            }
+          }
+          termScores.push(obj)
+        }
+
+        if (hasMatchInText) {
+          numTextMatches++
+        }
+
+        if (options.verbose) log(&#x27;Token scores:&#x27;, termScores)
+      }
+
+      averageScore = scores[0]
+      scoresLen = scores.length
+      for (i = 1; i &#x3c; scoresLen; i++) {
+        averageScore += scores[i]
+      }
+      averageScore = averageScore / scoresLen
+
+      if (options.verbose) log(&#x27;Token score average:&#x27;, averageScore)
+    }
+
+    mainSearchResult = this.fullSeacher.search(text)
+    if (options.verbose) log(&#x27;Full text score:&#x27;, mainSearchResult.score)
+
+    finalScore = mainSearchResult.score
+    if (averageScore !== undefined) {
+      finalScore = (finalScore + averageScore) / 2
+    }
+
+    if (options.verbose) log(&#x27;Score average:&#x27;, finalScore)
+
+    checkTextMatches = (this.options.tokenize &#x26;&#x26; this.options.matchAllTokens) ? numTextMatches &#x3e;= this.tokenSearchers.length : true
+
+    if (options.verbose) log(&#x27;Check Matches&#x27;, checkTextMatches)
+
+    // If a match is found, add the item to &#x3c;rawResults&#x3e;, including its score
+    if ((exists || mainSearchResult.isMatch) &#x26;&#x26; checkTextMatches) {
+      // Check if the item already exists in our results
+      existingResult = this.resultMap[index]
+
+      if (existingResult) {
+        // Use the lowest score
+        // existingResult.score, bitapResult.score
+        existingResult.output.push({
+          key: key,
+          score: finalScore,
+          matchedIndices: mainSearchResult.matchedIndices
+        })
+      } else {
+        // Add it to the raw result list
+        this.resultMap[index] = {
+          item: entity,
+          output: [{
+            key: key,
+            score: finalScore,
+            matchedIndices: mainSearchResult.matchedIndices
+          }]
+        }
+
+        this.results.push(this.resultMap[index])
+      }
+    }
+  } else if (isArray(text)) {
+    for (i = 0; i &#x3c; text.length; i++) {
+      this._analyze(key, text[i], entity, index)
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fuse.js.fuse.prototype._computeScore" id="apidoc.element.fuse.js.fuse.prototype._computeScore">
+        function <span class="apidocSignatureSpan">fuse.js.fuse.prototype.</span>_computeScore
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_computeScore = function () {
+  var i
+  var j
+  var keyMap = this._keyMap
+  var totalScore
+  var output
+  var scoreLen
+  var score
+  var weight
+  var results = this.results
+  var bestScore
+  var nScore
+
+  if (this.options.verbose) log(&#x27;\n\nComputing score:\n&#x27;)
+
+  for (i = 0; i &#x3c; results.length; i++) {
+    totalScore = 0
+    output = results[i].output
+    scoreLen = output.length
+
+    bestScore = 1
+
+    for (j = 0; j &#x3c; scoreLen; j++) {
+      score = output[j].score
+      weight = keyMap ? keyMap[output[j].key].weight : 1
+
+      nScore = score * weight
+
+      if (weight !== 1) {
+        bestScore = Math.min(bestScore, nScore)
+      } else {
+        totalScore += nScore
+        output[j].nScore = nScore
+      }
+    }
+
+    if (bestScore === 1) {
+      results[i].score = totalScore / scoreLen
+    } else {
+      results[i].score = bestScore
+    }
+
+    if (this.options.verbose) log(results[i])
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fuse.js.fuse.prototype._format" id="apidoc.element.fuse.js.fuse.prototype._format">
+        function <span class="apidocSignatureSpan">fuse.js.fuse.prototype.</span>_format
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_format = function () {
+  var options = this.options
+  var getFn = options.getFn
+  var finalOutput = []
+  var item
+  var i
+  var len
+  var results = this.results
+  var replaceValue
+  var getItemAtIndex
+  var include = options.include
+
+  if (options.verbose) log(&#x27;\n\nOutput:\n\n&#x27;, results)
+
+  // Helper function, here for speed-up, which replaces the item with its value,
+  // if the options specifies it,
+  replaceValue = options.id ? function (index) {
+    results[index].item = getFn(results[index].item, options.id, [])[0]
+  } : function () {}
+
+  getItemAtIndex = function (index) {
+    var record = results[index]
+    var data
+    var j
+    var output
+    var _item
+    var _result
+
+    // If `include` has values, put the item in the result
+    if (include.length &#x3e; 0) {
+      data = {
+        item: record.item
+      }
+      if (include.indexOf(&#x27;matches&#x27;) !== -1) {
+        output = record.output
+        data.matches = []
+        for (j = 0; j &#x3c; output.length; j++) {
+          _item = output[j]
+          _result = {
+            indices: _item.matchedIndices
+          }
+          if (_item.key) {
+            _result.key = _item.key
+          }
+          data.matches.push(_result)
+        }
+      }
+
+      if (include.indexOf(&#x27;score&#x27;) !== -1) {
+        data.score = results[index].score
+      }
+
+    } else {
+      data = record.item
+    }
+
+    return data
+  }
+
+  // From the results, push into a new array only the item identifier (if specified)
+  // of the entire item.  This is because we don&#x27;t want to return the &#x3c;results&#x3e;,
+  // since it contains other metadata
+  for (i = 0, len = results.length; i &#x3c; len; i++) {
+    replaceValue(i)
+    item = getItemAtIndex(i)
+    finalOutput.push(item)
+  }
+
+  return finalOutput
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fuse.js.fuse.prototype._prepareSearchers" id="apidoc.element.fuse.js.fuse.prototype._prepareSearchers">
+        function <span class="apidocSignatureSpan">fuse.js.fuse.prototype.</span>_prepareSearchers
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_prepareSearchers = function () {
+  var options = this.options
+  var pattern = this.pattern
+  var searchFn = options.searchFn
+  var tokens = pattern.split(options.tokenSeparator)
+  var i = 0
+  var len = tokens.length
+
+  if (this.options.tokenize) {
+    this.tokenSearchers = []
+    for (; i &#x3c; len; i++) {
+      this.tokenSearchers.push(new searchFn(tokens[i], options))
+    }
+  }
+  this.fullSeacher = new searchFn(pattern, options)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fuse.js.fuse.prototype._sort" id="apidoc.element.fuse.js.fuse.prototype._sort">
+        function <span class="apidocSignatureSpan">fuse.js.fuse.prototype.</span>_sort
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_sort = function () {
+  var options = this.options
+  if (options.shouldSort) {
+    if (options.verbose) log(&#x27;\n\nSorting....&#x27;)
+    this.results.sort(options.sortFn)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fuse.js.fuse.prototype._startSearch" id="apidoc.element.fuse.js.fuse.prototype._startSearch">
+        function <span class="apidocSignatureSpan">fuse.js.fuse.prototype.</span>_startSearch
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_startSearch = function () {
+  var options = this.options
+  var getFn = options.getFn
+  var list = this.list
+  var listLen = list.length
+  var keys = this.options.keys
+  var keysLen = keys.length
+  var key
+  var weight
+  var item = null
+  var i
+  var j
+
+  // Check the first item in the list, if it&#x27;s a string, then we assume
+  // that every item in the list is also a string, and thus it&#x27;s a flattened array.
+  if (typeof list[0] === &#x27;string&#x27;) {
+    // Iterate over every item
+    for (i = 0; i &#x3c; listLen; i++) {
+      this._analyze(&#x27;&#x27;, list[i], i, i)
+    }
+  } else {
+    this._keyMap = {}
+    // Otherwise, the first item is an Object (hopefully), and thus the searching
+    // is done on the values of the keys of each item.
+    // Iterate over every item
+    for (i = 0; i &#x3c; listLen; i++) {
+      item = list[i]
+      // Iterate over every key
+      for (j = 0; j &#x3c; keysLen; j++) {
+        key = keys[j]
+        if (typeof key !== &#x27;string&#x27;) {
+          weight = (1 - key.weight) || 1
+          this._keyMap[key.name] = {
+            weight: weight
+          }
+          if (key.weight &#x3c;= 0 || key.weight &#x3e; 1) {
+            throw new Error(&#x27;Key weight has to be &#x3e; 0 and &#x3c;= 1&#x27;)
+          }
+          key = key.name
+        } else {
+          this._keyMap[key] = {
+            weight: 1
+          }
+        }
+        this._analyze(key, getFn(item, key, []), item, i)
+      }
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fuse.js.fuse.prototype.search" id="apidoc.element.fuse.js.fuse.prototype.search">
+        function <span class="apidocSignatureSpan">fuse.js.fuse.prototype.</span>search
+        <span class="apidocSignatureSpan">(pattern)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">search = function (pattern) {
+  if (this.options.verbose) log(&#x27;\nSearch term:&#x27;, pattern, &#x27;\n&#x27;)
+
+  this.pattern = pattern
+  this.results = []
+  this.resultMap = {}
+  this._keyMap = null
+
+  this._prepareSearchers()
+  this._startSearch()
+  this._computeScore()
+  this._sort()
+
+  var output = this._format()
+  return output
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fuse.js.fuse.prototype.set" id="apidoc.element.fuse.js.fuse.prototype.set">
+        function <span class="apidocSignatureSpan">fuse.js.fuse.prototype.</span>set
+        <span class="apidocSignatureSpan">(list)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function (list) {
+  this.list = list
+  return list
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
 
 
 </div>

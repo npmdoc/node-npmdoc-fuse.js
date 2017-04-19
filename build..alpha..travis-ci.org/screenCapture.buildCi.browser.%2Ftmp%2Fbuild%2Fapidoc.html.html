@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/krisk/Fuse#readme"
-
-    >fuse.js (v2.6.2)</a>
+    <a href="https://github.com/krisk/Fuse#readme">fuse.js (v2.6.2)</a>
 </h1>
 <h4>Lightweight fuzzy-search</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.fuse.js">module fuse.js</a><ol>
 
@@ -221,7 +214,7 @@
       continue;
     }
     // Add boolean type options
-    if (typeof defaultOptions[key] === &#x27;boolean&#x27;) {
+    if (typeof defaultOptions[key] === 'boolean') {
       this.options[key] = key in options ? options[key] : defaultOptions[key];
     // Add all other options
     } else {
@@ -252,7 +245,7 @@
       continue;
     }
     // Add boolean type options
-    if (typeof defaultOptions[key] === &#x27;boolean&#x27;) {
+    if (typeof defaultOptions[key] === 'boolean') {
       this.options[key] = key in options ? options[key] : defaultOptions[key];
     // Add all other options
     } else {
@@ -283,7 +276,7 @@
       continue;
     }
     // Add boolean type options
-    if (typeof defaultOptions[key] === &#x27;boolean&#x27;) {
+    if (typeof defaultOptions[key] === 'boolean') {
       this.options[key] = key in options ? options[key] : defaultOptions[key];
     // Add all other options
     } else {
@@ -323,7 +316,7 @@
       continue;
     }
     // Add boolean type options
-    if (typeof defaultOptions[key] === &#x27;boolean&#x27;) {
+    if (typeof defaultOptions[key] === 'boolean') {
       this.options[key] = key in options ? options[key] : defaultOptions[key];
     // Add all other options
     } else {
@@ -378,21 +371,21 @@
 
   var numTextMatches = 0
 
-  if (typeof text === &#x27;string&#x27;) {
+  if (typeof text === 'string') {
     words = text.split(options.tokenSeparator)
 
-    if (options.verbose) log(&#x27;---------\nKey:&#x27;, key)
+    if (options.verbose) log('---------\nKey:', key)
 
     if (this.options.tokenize) {
-      for (i = 0; i &#x3c; this.tokenSearchers.length; i++) {
+      for (i = 0; i &lt; this.tokenSearchers.length; i++) {
         tokenSearcher = this.tokenSearchers[i]
 
-        if (options.verbose) log(&#x27;Pattern:&#x27;, tokenSearcher.pattern)
+        if (options.verbose) log('Pattern:', tokenSearcher.pattern)
 
         termScores = []
         hasMatchInText = false
 
-        for (j = 0; j &#x3c; words.length; j++) {
+        for (j = 0; j &lt; words.length; j++) {
           word = words[j]
           tokenSearchResult = tokenSearcher.search(word)
           var obj = {}
@@ -414,35 +407,35 @@
           numTextMatches++
         }
 
-        if (options.verbose) log(&#x27;Token scores:&#x27;, termScores)
+        if (options.verbose) log('Token scores:', termScores)
       }
 
       averageScore = scores[0]
       scoresLen = scores.length
-      for (i = 1; i &#x3c; scoresLen; i++) {
+      for (i = 1; i &lt; scoresLen; i++) {
         averageScore += scores[i]
       }
       averageScore = averageScore / scoresLen
 
-      if (options.verbose) log(&#x27;Token score average:&#x27;, averageScore)
+      if (options.verbose) log('Token score average:', averageScore)
     }
 
     mainSearchResult = this.fullSeacher.search(text)
-    if (options.verbose) log(&#x27;Full text score:&#x27;, mainSearchResult.score)
+    if (options.verbose) log('Full text score:', mainSearchResult.score)
 
     finalScore = mainSearchResult.score
     if (averageScore !== undefined) {
       finalScore = (finalScore + averageScore) / 2
     }
 
-    if (options.verbose) log(&#x27;Score average:&#x27;, finalScore)
+    if (options.verbose) log('Score average:', finalScore)
 
-    checkTextMatches = (this.options.tokenize &#x26;&#x26; this.options.matchAllTokens) ? numTextMatches &#x3e;= this.tokenSearchers.length : true
+    checkTextMatches = (this.options.tokenize &amp;&amp; this.options.matchAllTokens) ? numTextMatches &gt;= this.tokenSearchers.length : true
 
-    if (options.verbose) log(&#x27;Check Matches&#x27;, checkTextMatches)
+    if (options.verbose) log('Check Matches', checkTextMatches)
 
-    // If a match is found, add the item to &#x3c;rawResults&#x3e;, including its score
-    if ((exists || mainSearchResult.isMatch) &#x26;&#x26; checkTextMatches) {
+    // If a match is found, add the item to &lt;rawResults&gt;, including its score
+    if ((exists || mainSearchResult.isMatch) &amp;&amp; checkTextMatches) {
       // Check if the item already exists in our results
       existingResult = this.resultMap[index]
 
@@ -469,7 +462,7 @@
       }
     }
   } else if (isArray(text)) {
-    for (i = 0; i &#x3c; text.length; i++) {
+    for (i = 0; i &lt; text.length; i++) {
       this._analyze(key, text[i], entity, index)
     }
   }
@@ -499,16 +492,16 @@
   var bestScore
   var nScore
 
-  if (this.options.verbose) log(&#x27;\n\nComputing score:\n&#x27;)
+  if (this.options.verbose) log('\n\nComputing score:\n')
 
-  for (i = 0; i &#x3c; results.length; i++) {
+  for (i = 0; i &lt; results.length; i++) {
     totalScore = 0
     output = results[i].output
     scoreLen = output.length
 
     bestScore = 1
 
-    for (j = 0; j &#x3c; scoreLen; j++) {
+    for (j = 0; j &lt; scoreLen; j++) {
       score = output[j].score
       weight = keyMap ? keyMap[output[j].key].weight : 1
 
@@ -555,7 +548,7 @@
   var getItemAtIndex
   var include = options.include
 
-  if (options.verbose) log(&#x27;\n\nOutput:\n\n&#x27;, results)
+  if (options.verbose) log('\n\nOutput:\n\n', results)
 
   // Helper function, here for speed-up, which replaces the item with its value,
   // if the options specifies it,
@@ -572,14 +565,14 @@
     var _result
 
     // If `include` has values, put the item in the result
-    if (include.length &#x3e; 0) {
+    if (include.length &gt; 0) {
       data = {
         item: record.item
       }
-      if (include.indexOf(&#x27;matches&#x27;) !== -1) {
+      if (include.indexOf('matches') !== -1) {
         output = record.output
         data.matches = []
-        for (j = 0; j &#x3c; output.length; j++) {
+        for (j = 0; j &lt; output.length; j++) {
           _item = output[j]
           _result = {
             indices: _item.matchedIndices
@@ -591,7 +584,7 @@
         }
       }
 
-      if (include.indexOf(&#x27;score&#x27;) !== -1) {
+      if (include.indexOf('score') !== -1) {
         data.score = results[index].score
       }
 
@@ -603,9 +596,9 @@
   }
 
   // From the results, push into a new array only the item identifier (if specified)
-  // of the entire item.  This is because we don&#x27;t want to return the &#x3c;results&#x3e;,
+  // of the entire item.  This is because we don't want to return the &lt;results&gt;,
   // since it contains other metadata
-  for (i = 0, len = results.length; i &#x3c; len; i++) {
+  for (i = 0, len = results.length; i &lt; len; i++) {
     replaceValue(i)
     item = getItemAtIndex(i)
     finalOutput.push(item)
@@ -635,7 +628,7 @@
 
   if (this.options.tokenize) {
     this.tokenSearchers = []
-    for (; i &#x3c; len; i++) {
+    for (; i &lt; len; i++) {
       this.tokenSearchers.push(new searchFn(tokens[i], options))
     }
   }
@@ -656,7 +649,7 @@
     <li>description and source-code<pre class="apidocCodePre">_sort = function () {
   var options = this.options
   if (options.shouldSort) {
-    if (options.verbose) log(&#x27;\n\nSorting....&#x27;)
+    if (options.verbose) log('\n\nSorting....')
     this.results.sort(options.sortFn)
   }
 }</pre></li>
@@ -685,30 +678,30 @@
   var i
   var j
 
-  // Check the first item in the list, if it&#x27;s a string, then we assume
-  // that every item in the list is also a string, and thus it&#x27;s a flattened array.
-  if (typeof list[0] === &#x27;string&#x27;) {
+  // Check the first item in the list, if it's a string, then we assume
+  // that every item in the list is also a string, and thus it's a flattened array.
+  if (typeof list[0] === 'string') {
     // Iterate over every item
-    for (i = 0; i &#x3c; listLen; i++) {
-      this._analyze(&#x27;&#x27;, list[i], i, i)
+    for (i = 0; i &lt; listLen; i++) {
+      this._analyze('', list[i], i, i)
     }
   } else {
     this._keyMap = {}
     // Otherwise, the first item is an Object (hopefully), and thus the searching
     // is done on the values of the keys of each item.
     // Iterate over every item
-    for (i = 0; i &#x3c; listLen; i++) {
+    for (i = 0; i &lt; listLen; i++) {
       item = list[i]
       // Iterate over every key
-      for (j = 0; j &#x3c; keysLen; j++) {
+      for (j = 0; j &lt; keysLen; j++) {
         key = keys[j]
-        if (typeof key !== &#x27;string&#x27;) {
+        if (typeof key !== 'string') {
           weight = (1 - key.weight) || 1
           this._keyMap[key.name] = {
             weight: weight
           }
-          if (key.weight &#x3c;= 0 || key.weight &#x3e; 1) {
-            throw new Error(&#x27;Key weight has to be &#x3e; 0 and &#x3c;= 1&#x27;)
+          if (key.weight &lt;= 0 || key.weight &gt; 1) {
+            throw new Error('Key weight has to be &gt; 0 and &lt;= 1')
           }
           key = key.name
         } else {
@@ -734,7 +727,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">search = function (pattern) {
-  if (this.options.verbose) log(&#x27;\nSearch term:&#x27;, pattern, &#x27;\n&#x27;)
+  if (this.options.verbose) log('\nSearch term:', pattern, '\n')
 
   this.pattern = pattern
   this.results = []
@@ -777,3 +770,4 @@
     ]
 </div>
 </div>
+</body></html>
